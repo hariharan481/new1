@@ -1,0 +1,29 @@
+.tablees{
+border: 1px solid black;
+text-align: center;
+}
+.table1{
+    height: 60px;
+    width: 80%;
+}
+ .headerss
+{
+    border: 1px solid #85b9f3;
+    color: indigo;
+}
+ .datas {
+    font-size: 1rem;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #443C68;
+    min-width: 3rem;
+    padding: 1rem;
+   
+    color: indigo;
+}
+
+
+
+
+
+
