@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 const Chapternotesm = () => {
   const [results, setResults] = useState(null);
-  const Code = (global.values?.code || '').replace(/[-.]/g, '');
+  const Code = (global.values?.code || "").replace(/[-.]/g, "");
   useEffect(() => {
     const fetchBooks = async () => {
       try {
@@ -12,10 +12,11 @@ const Chapternotesm = () => {
           !global.isCodeClicked
         ) {
           const response = await fetch(
-            `/codes/${Code}/details/?version=${global.years}`, {
-              method:'GET',
+            `/codes/${Code}/details/?version=${global.years}`,
+            {
+              method: "GET",
               headers: {
-                Authorization: `Bearer ${global.tokens} `// Replace with your actual token
+                Authorization: `Bearer ${global.tokens} `, // Replace with your actual token
               },
             }
           );
@@ -56,8 +57,8 @@ const Chapternotesm = () => {
       <div
         style={{
           marginTop: "1%",
-          height: "50vh",
-          width: "44vw",
+          height: "60vh",
+          width: "97vw",
           fontFamily: "Verdana",
           fontSize: "13px",
         }}

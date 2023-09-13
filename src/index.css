@@ -113,3 +113,11 @@ td {
 }
 
 .details {}
+
+.neoplasm-table {
+  display: none;
+}
+
+.neoplasm-table.active {
+  display: block;
+}

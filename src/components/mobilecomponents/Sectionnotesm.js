@@ -1,19 +1,18 @@
-
-
 import React, { useEffect, useState } from "react";
 const Sectionnotesm = () => {
   const [results, setResults] = useState(null);
   const globalValuesCode = global.values.code;
-  const Code = (global.values?.code || '').replace(/[-.]/g, '');
+  const Code = (global.values?.code || "").replace(/[-.]/g, "");
   useEffect(() => {
     const fetchBooks = async () => {
       try {
         if (globalValuesCode && global.years && !global.isCodeClicked) {
           const response = await fetch(
-            `/codes/${Code}/details/?version=${global.years}`, {
-              method:'GET',
+            `/codes/${Code}/details/?version=${global.years}`,
+            {
+              method: "GET",
               headers: {
-                Authorization: `Bearer ${global.tokens} `// Replace with your actual token
+                Authorization: `Bearer ${global.tokens} `, // Replace with your actual token
               },
             }
           );
@@ -45,8 +44,8 @@ const Sectionnotesm = () => {
   return (
     <div
       style={{
-        height: "40vh",
-        width: "43vw",
+        height: "60vh",
+        width: "97vw",
         marginTop: "-20px",
         fontFamily: "Verdana ",
       }}

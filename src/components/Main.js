@@ -51,7 +51,7 @@ function a11yProps(index) {
     "aria-controls": `simple-tabpanel-${index}`,
   };
 }
-export const Main = ({ refreshMain ,isNeoplasmSelected}) => {
+export const Main = ({ refreshMain, isNeoplasmSelected }) => {
   console.log("enter main");
   const [value, setValue] = useState(0);
   const [showTable, setShowTable] = useState(false);
@@ -59,7 +59,6 @@ export const Main = ({ refreshMain ,isNeoplasmSelected}) => {
   const [showDrug, setShowdrug] = useState(false);
   const [results1, setResults1] = useState([]);
   const [selectedCode, setSelectedCode] = useState(null);
-  
 
   useEffect(() => {
     if (refreshMain) {
@@ -81,14 +80,12 @@ export const Main = ({ refreshMain ,isNeoplasmSelected}) => {
     setShowTable(!showTable);
     setShowIndex(false);
     setShowdrug(false);
-
   };
   const handleNavBtnClick3 = (btnId) => {
     setActiveBtn(btnId);
     setShowdrug(!showDrug);
     setShowIndex(false);
     setShowTable(false);
- 
   };
   const handleRefresh = () => {
     setValue(0);
@@ -106,7 +103,7 @@ export const Main = ({ refreshMain ,isNeoplasmSelected}) => {
       setShowTable(false);
       setShowdrug(false);
 
-      setShowIndex(false)
+      setShowIndex(false);
     }
   }, [isNeoplasmSelected]);
   const matches = useMediaQuery("(max-width:768px)");
@@ -152,7 +149,7 @@ export const Main = ({ refreshMain ,isNeoplasmSelected}) => {
                   >
                     Code details
                   </Typography>
-                  
+
                   <Box>{<Codedetm />}</Box>
                   <div
                     style={{
@@ -171,7 +168,6 @@ export const Main = ({ refreshMain ,isNeoplasmSelected}) => {
                           height: "3.5vh",
                           color: "black",
                           display: "flex",
-                         
                         }}
                       >
                         <Tabs
@@ -185,7 +181,7 @@ export const Main = ({ refreshMain ,isNeoplasmSelected}) => {
                             style: {
                               backgroundColor: "#4185D2",
                               width: "50px",
-                              marginTop:"-10px",
+                              marginTop: "-10px",
                               marginLeft: "35px",
                               marginBottom: "20px",
                               fontWeight: "800px",
@@ -240,7 +236,6 @@ export const Main = ({ refreshMain ,isNeoplasmSelected}) => {
                               width: "140px",
                               marginLeft: "-30px",
                               marginTop: "-10px",
-                              
                             }}
                             variant="subtitle1"
                             fontWeight={"700"}
@@ -439,11 +434,13 @@ export const Main = ({ refreshMain ,isNeoplasmSelected}) => {
                       setResults1={setResults1}
                       setSelectedCode={setSelectedCode}
                     />
-                  )}     {isNeoplasmSelected && (
-                    <NeoplasmTable  setResults1={setResults1}
-                    setSelectedCode={setSelectedCode}/>
+                  )}{" "}
+                  {isNeoplasmSelected && (
+                    <NeoplasmTable
+                      setResults1={setResults1}
+                      setSelectedCode={setSelectedCode}
+                    />
                   )}
-                
                 </div>
                 <button
                   style={{
@@ -486,25 +483,25 @@ export const Main = ({ refreshMain ,isNeoplasmSelected}) => {
                       width: "44vw",
                     }}
                   >
-                  <Typography
-                    variant="subtitle1"
-                    fontFamily={"sans-serif"}
-                    color={" #4185D2"}
-                  >
-                    Tabular Search
-                  </Typography>
-                  <Typography
-                    mt={3}
-                    variant="subtitle1"
-                    fontFamily={"sans-serif"}
-                    color={" #4185D2"}
-                    fontWeight={600}
-                    sx={{
-                      borderBottom: "0.3px solid grey",
-                    }}
-                  >
-                    Code details
-                  </Typography>
+                    <Typography
+                      variant="subtitle1"
+                      fontFamily={"sans-serif"}
+                      color={" #4185D2"}
+                    >
+                      Tabular Search
+                    </Typography>
+                    <Typography
+                      mt={3}
+                      variant="subtitle1"
+                      fontFamily={"sans-serif"}
+                      color={" #4185D2"}
+                      fontWeight={600}
+                      sx={{
+                        borderBottom: "0.3px solid grey",
+                      }}
+                    >
+                      Code details
+                    </Typography>
 
                     <Box>{<Codedet />}</Box>
                     <div
@@ -524,7 +521,6 @@ export const Main = ({ refreshMain ,isNeoplasmSelected}) => {
                             height: "30px",
                             color: "black",
                             display: "flex",
-                            
                           }}
                         >
                           <Tabs
@@ -532,7 +528,6 @@ export const Main = ({ refreshMain ,isNeoplasmSelected}) => {
                             onChange={handleChange}
                             aria-label="basic tabs example"
                             className="tabs"
-                            
                             TabIndicatorProps={{
                               style: {
                                 backgroundColor: "#4185D2",
@@ -609,7 +604,6 @@ export const Main = ({ refreshMain ,isNeoplasmSelected}) => {
                                 textTransform: "none",
                                 width: "150px",
                                 marginTop: "-10px",
-                                
                               }}
                               variant="subtitle1"
                               fontWeight={"700"}
@@ -622,9 +616,9 @@ export const Main = ({ refreshMain ,isNeoplasmSelected}) => {
                         <div
                           style={{
                             display: "flex",
-                          
+
                             textAlign: "left",
-                        
+
                             marginTop: "20px",
                             overflowX: "auto",
                             width: "44vw",

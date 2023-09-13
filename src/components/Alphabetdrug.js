@@ -33,7 +33,7 @@ function a11yProps(index) {
     "aria-controls": `simple-tabpanel-${index}`,
   };
 }
-export const Alphabetdrug= ({ setSelectedCode }) => {
+export const Alphabetdrug = ({ setSelectedCode }) => {
   const [value, setValue] = useState(0);
   const [showTable, setShowTable] = useState(false);
   const [showIndx, setShowIndex] = useState(false);
@@ -92,7 +92,6 @@ export const Alphabetdrug= ({ setSelectedCode }) => {
   };
   return (
     <div>
- 
       <Stack direction={"column"} ml={20} mt={1.5} sx={{ width: "5px" }}>
         <Box
           sx={{
@@ -111,11 +110,11 @@ export const Alphabetdrug= ({ setSelectedCode }) => {
               color: "black",
               fontFamily: "sans-serif",
               fontSize: "13px",
-ml:"-187px",
-mt:"-50px"
+              ml: "-187px",
+              mt: "-50px",
             }}
           >
-            <Stack direction={"row"} gap={"0px"} ml={5}> 
+            <Stack direction={"row"} gap={"0px"} ml={5}>
               <Box sx={{ width: "100%" }}>
                 <Box sx={{ marginTop: "-10px" }}>
                   <Tabs
@@ -584,16 +583,13 @@ mt:"-50px"
                   style={{
                     height: "60vh",
                     width: "49.9vw",
-                  
 
-                  
                     marginTop: "-36px",
                     marginLeft: "-46px",
 
                     display: "flex",
                   }}
                 >
-                
                   <CustomTabPanel value={value} index={0}>
                     <Drug1 onCodeClick={setSelectedCode} />
                   </CustomTabPanel>
@@ -654,7 +650,7 @@ mt:"-50px"
                   <CustomTabPanel value={value} index={19}>
                     <Drug2 onCodeClick={setSelectedCode} />
                   </CustomTabPanel>
-                 
+
                   <CustomTabPanel value={value} index={20}>
                     <Drug2 onCodeClick={setSelectedCode} />
                   </CustomTabPanel>
